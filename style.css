@@ -459,3 +459,55 @@ transition:0.3s;
 background:#ff5c9f;
 transform:scale(1.05);
 }
+
+/* =====================
+   HEART ORDER BUTTON
+===================== */
+
+.heart-btn{
+position:relative;
+width:70px;
+height:70px;
+background:#ff6fa9;
+transform:rotate(-45deg);
+margin:20px auto;
+display:block;
+text-decoration:none;
+}
+
+.heart-btn:before,
+.heart-btn:after{
+content:"";
+position:absolute;
+width:70px;
+height:70px;
+background:#ff6fa9;
+border-radius:50%;
+}
+
+.heart-btn:before{
+top:-35px;
+left:0;
+}
+
+.heart-btn:after{
+left:35px;
+top:0;
+}
+
+.heart-btn span{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) rotate(45deg);
+color:white;
+font-size:18px;
+font-weight:bold;
+z-index:2;
+white-space:nowrap;
+}
+
+.contact-buttons i{
+margin-right:8px;
+font-size:18px;
+}
