@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanae</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <div class="nav-left">
+        <h1>hnaa.e</h1>
+    </div>
+
+    <div class="nav-right">
+        <a href="#about">เกี่ยวกับฉัน</a>
+        <a href="#gallery">ผลงาน</a>
+        <a href="#contact">ติดต่อ</a>
+    </div>
+</nav>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+    <div class="slider-container">
+
+        <button class="prev">&#10094;</button>
+
+        <div class="slider">
+
+<a href="art1.html" class="art-card">
+<img src="images/S__41508867.jpg">
+<p>Character Commission</p>
+</a>
+
+<a href="art2.html" class="art-card">
+<img src="images/S__41508868.jpg">
+<p>Chibi Illustration</p>
+</a>
+
+<a href="art3.html" class="art-card">
+<img src="images/S__51650579.jpg">
+<p>Profile Picture</p>
+</a>
+
+<a href="art4.html" class="art-card">
+<img src="images/S__51650580.jpg">
+<p>Custom Artwork</p>
+</a>
+
+<a href="ing.html" class="art-card">
+<img src="images/S__51650580.jpg">
+<p>Ing Artwork</p>
+</a>
+
+</div>
+
+        <button class="next">&#10095;</button>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2>ติดต่อสั่งงาน</h2>
+
+    <p>
+        กดปุ่มด้านล่างเพื่อสั่งงานหรือดูผลงานเพิ่มเติม
+    </p>
+
+    <div class="contact-buttons">
+
+        <a href="https://lin.ee/50TADIj" target="_blank" class="line-btn">
+            สั่งงานผ่าน LINE
+        </a>
+
+        <a href="https://www.instagram.com/hnaa.e_" target="_blank" class="ig-btn">
+            ดูผลงานใน Instagram
+        </a>
+
+        <a href="https://www.facebook.com/hanae.192619" target="_blank" class="fb-btn">
+            ติดต่อผ่าน Facebook
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 hnaa.e</p>
+</footer>
+
+
+<script>
+
+const slider = document.querySelector(".slider");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+nextBtn.onclick = () => {
+    slider.scrollLeft += 300;
+};
+
+prevBtn.onclick = () => {
+    slider.scrollLeft -= 300;
+};
+
+</script>
+
+</body>
+</html>
