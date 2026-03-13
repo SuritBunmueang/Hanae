@@ -88,11 +88,11 @@ section h2 {
 /* =====================
    SLIDER (Gallery Home)
 ===================== */
-.slider-container {
-    position: relative;
-    margin-top: 30px;
-}
+/* =====================
+   GALLERY / SLIDER RESPONSIVE
+===================== */
 
+/* สำหรับคอมพิวเตอร์ (หน้าจอกว้าง) - เลื่อนซ้ายขวา */
 .slider {
     display: flex;
     overflow-x: auto;
@@ -100,9 +100,35 @@ section h2 {
     padding: 20px;
     scroll-behavior: smooth;
 }
-
+/* สำหรับ Chrome, Safari และ Opera */
 .slider::-webkit-scrollbar {
     display: none;
+}
+
+/* สำหรับ Firefox (เผื่อไว้) */
+.slider {
+    scrollbar-width: none;
+}
+
+/* สำหรับมือถือ (หน้าจอแคบ) - เลื่อนขึ้นลง */
+@media (max-width: 768px) {
+    .slider {
+        display: grid;               /* เปลี่ยนเป็น Grid */
+        grid-template-columns: 1fr;  /* จัดเรียงเป็นคอลัมน์เดียว */
+        overflow-x: hidden;          /* ปิดการเลื่อนซ้ายขวา */
+        overflow-y: auto;            /* เปิดการเลื่อนขึ้นลง */
+        max-height: 80vh;            /* จำกัดความสูงเพื่อไม่ให้ยาวเกินไป */
+    }
+
+    .slider img {
+        width: 100%;                 /* ปรับรูปให้เต็มความกว้างมือถือ */
+        height: auto;
+    }
+
+    /* ซ่อนปุ่มลูกศรในมือถือเพราะเลื่อนด้วยนิ้วได้เลย */
+    .prev, .next {
+        display: none;
+    }
 }
 
 .art-card {
