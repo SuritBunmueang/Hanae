@@ -353,21 +353,77 @@ footer {
    text-align: center;
    color: #999;
 }
-
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 768px) {
-   nav { padding: 0 20px; }
-   .nav-right { gap: 15px; }
-   .gallery-page { grid-template-columns: 1fr; }
-   .page-title { font-size: 30px; }
+/* จัดระเบียบรายการราคาให้ตรงกัน */
+.price-box ul {
+    list-style: none; /* เอาจุดวงกลมหน้าข้อความออกเพื่อให้ดูสะอาดขึ้น (ถ้าอยากเก็บไว้ให้ลบบรรทัดนี้ออกครับ) */
+    padding: 0;
+    margin: 0;
 }
 
-/* ป้องกันการคลุมดำ/ลากรูป (เอา pointer-events ออกเพื่อให้คลิกได้) */
-img {
-   -webkit-user-select: none;
-   user-select: none;
+.price-box li {
+    display: flex;
+    justify-content: space-between; /* สั่งให้ข้อความอยู่ซ้ายสุด และราคาไปอยู่ขวาสุด */
+    align-items: center;
+    border-bottom: 1px dashed #ccc; /* เพิ่มเส้นประบางๆ คั่นแต่ละบรรทัดให้อ่านง่ายขึ้น (ไม่ชอบลบได้ครับ) */
+    padding: 10px 0; /* เพิ่มระยะห่างบน-ล่างให้ไม่อึดอัด */
+}
+
+/* เอาเส้นประบรรทัดสุดท้ายออก */
+.price-box li:last-child {
+    border-bottom: none;
+}
+
+.price-box li span {
+    font-weight: bold; /* ทำให้ราคาเป็นตัวหนา */
+    color: #f176c0; /* เปลี่ยนสีราคาให้เด่นขึ้น (เป็นสีชมพูเดียวกับโลโก้) */
+    text-align: right;
+    white-space: nowrap; /* ป้องกันไม่ให้คำว่า 'บาท' ตกบรรทัด */
+    margin-left: 15px; /* ดันไม่ให้ข้อความฝั่งซ้ายมาติดราคาเกินไป */
+}
+/* =====================
+   RESPONSIVE (ปรับขนาดอัตโนมัติในมือถือ)
+===================== */
+@media (max-width: 768px) {
+   nav { 
+       padding: 0 15px; /* ลดขอบซ้ายขวาของแถบเมนูลง */
+   }
+   
+   .nav-left h1 { 
+       font-size: 24px; /* ลดขนาดโลโก้ hnaa.e ลงนิดหน่อย */
+   }
+   
+   .nav-right { 
+       gap: 12px; /* ลดระยะห่างระหว่างเมนู */
+   }
+   
+   .nav-right a { 
+       font-size: 14px; /* ลดขนาดตัวหนังสือ Art Work, Contact */
+   }
+   
+   .gallery-page { 
+       grid-template-columns: 1fr; 
+   }
+   
+   .page-title { 
+       font-size: 30px; 
+   }
+}
+
+/* เพิ่มส่วนนี้สำหรับหน้าจอมือถือที่เล็กมากๆ (เช่น จอขนาด iPhone SE) */
+@media (max-width: 480px) {
+   .nav-left h1 { 
+       font-size: 20px; 
+   }
+   .nav-right { 
+       gap: 8px; 
+   }
+   .nav-right a { 
+       font-size: 12px; 
+   }
+   .mode-toggle {
+       margin-left: 5px; /* ลดระยะห่างของปุ่มพระอาทิตย์/พระจันทร์ */
+       transform: scale(0.8); /* ย่อขนาดปุ่มสวิตช์ลง 20% ไม่ให้เกะกะ */
+   }
 }
 
 /* =====================
@@ -511,3 +567,51 @@ body.dark-mode .art-card { background-color: #2a2a2a !important; border: 1px sol
 body.dark-mode .page-title { color: #ffffff !important; }
 body.dark-mode .note { color: #cccccc !important; }
 body.dark-mode footer { background-color: #111 !important; color: #aaaaaa !important; }
+
+/* =====================
+   LIGHTBOX SYSTEM (แก้ไขล่าสุด)
+===================== */
+.lightbox {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95); 
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+    cursor: zoom-out;
+    overflow: hidden; 
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; 
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    margin: auto;
+    display: block;
+    position: static !important; 
+    transform: none !important;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 50px; 
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000; 
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.close-lightbox:hover {
+    color: #ff6fa9; 
+    transform: scale(1.1);
+}

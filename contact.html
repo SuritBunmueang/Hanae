@@ -4,8 +4,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanae - Home</title>
+    <title>Hanae - Contact</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* เพิ่มเติมเล็กน้อยเพื่อให้หน้า Contact ดูสมดุล */
+        #contact {
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 70vh; /* ให้เนื้อหาอยู่กลางหน้าจอ */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,7 +40,6 @@
                     <input id="mode-checkbox" type="checkbox" />
                     <div class="toggle-slider round">
                         <div class="sun-moon">
-                            <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"></circle></svg>
                             </div>
                     </div>
                 </label>
@@ -30,32 +47,20 @@
         </div>
     </nav>
 
-    <section id="gallery">
-        <div class="slider-container">
-            <button class="prev">&#10094;</button>
-            <div class="slider">
-                <a href="art1.html" class="art-card">
-                    <img src="Deco/2.jpg">
-                    <p>Deco</p>
-                </a>
-                <a href="art2.html" class="art-card">
-                    <img src="Exprofile01/1 (23).jpg">
-                    <p>Ex. Profile 01</p>
-                </a>
-                <a href="art3.html" class="art-card">
-                    <img src="ExProfile 02/1 (2).jpg">
-                    <p>Ex. Profile 02</p>
-                </a>
-                <a href="art4.html" class="art-card">
-                    <img src="images/S__51650580.jpg">
-                    <p>Custom Artwork</p>
-                </a>
-                <a href="art5.html" class="art-card">
-                    <img src="images/1.jpg">
-                    <p>Ing Artwork</p>
-                </a>
-            </div>
-            <button class="next">&#10095;</button>
+    <section id="contact">
+        <h2>ติดต่อสั่งงาน</h2>
+        <p>กดปุ่มด้านล่างเพื่อสั่งงานหรือดูผลงานเพิ่มเติม</p>
+
+        <div class="contact-buttons">
+            <a href="https://lin.ee/50TADIj" class="line-btn" target="_blank">
+                <i class="fa-brands fa-line"></i> สั่งงานผ่าน LINE
+            </a>
+            <a href="https://www.instagram.com/hnaa.e_?igsh=MWN2c3JiZThodDdzbQ%3D%3D&utm_source=qr" class="ig-btn" target="_blank">
+                <i class="fa-brands fa-instagram"></i> ดูผลงานใน Instagram
+            </a>
+            <a href="https://www.facebook.com/hanae.192619" class="fb-btn" target="_blank">
+                <i class="fa-brands fa-facebook"></i> ติดต่อผ่าน Facebook
+            </a>
         </div>
     </section>
 
@@ -64,13 +69,6 @@
     </footer>
 
     <script>
-        // Slider Script
-        const slider = document.querySelector(".slider");
-        const nextBtn = document.querySelector(".next");
-        const prevBtn = document.querySelector(".prev");
-        nextBtn.onclick = () => { slider.scrollLeft += 300; };
-        prevBtn.onclick = () => { slider.scrollLeft -= 300; };
-
         // Dark Mode Script
         const modeCheckbox = document.getElementById('mode-checkbox');
         modeCheckbox.addEventListener('change', () => {
