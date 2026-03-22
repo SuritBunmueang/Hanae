@@ -1,93 +1,164 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Hanae Land</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #fff0f5 0%, #ffe0f0 100%);
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            overflow: hidden;
-        }
-
-        .intro-container {
-            text-align: center;
-            animation: fadeIn 1.5s ease-out;
-        }
-
-        .intro-logo {
-            font-size: 70px;
-            font-weight: bold;
-            color: #ff6fa9;
-            margin: 0;
-            text-shadow: 2px 5px 15px rgba(255, 111, 169, 0.3);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .subtitle {
-            font-size: 16px;
-            color: #f176c0;
-            letter-spacing: 4px;
-            margin-top: 10px;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-        }
-
-        .enter-btn {
-            display: inline-block;
-            padding: 16px 45px;
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-            background: #ff6fa9;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 8px 20px rgba(255, 111, 169, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        .enter-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            background: #ff5c9f;
-            box-shadow: 0 12px 25px rgba(255, 111, 169, 0.5);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        @media (max-width: 768px) {
-            .intro-logo { font-size: 50px; }
-            .subtitle { font-size: 14px; }
-            .enter-btn { padding: 14px 35px; font-size: 16px; }
-        }
-    </style>
+    <title>Hanae - Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container home-content">
+        <h1 class="big-logo">Hanae</h1>
+        <div class="cat-frame">
+    <img src="From Main Klickpin CF- Uploaded by user - 5lnQ8FGqd.gif" alt="">
+</div>
 
-    <div class="intro-container">
-        <h1 class="intro-logo">Hanae Land</h1>
-        <div class="subtitle">Art & Design Portfolio</div>
-        
-        <a href="home.html" class="enter-btn">เข้าสู่เว็บไซต์</a>
+
+        <div class="menu-grid">
+            <a href="#" class="menu-card">
+                <i class="fas fa-clipboard-list"></i>
+                <h3>Check Q</h3>
+                <p>เช็คคิวงานปัจจุบัน</p>
+            </a>
+            
+            <a href="detail.html" class="menu-card">
+                <i class="fas fa-book-open"></i>
+                <h3>Detail</h3>
+                <p>ข้อตกลงและรายละเอียดการสั่งงาน</p>
+            </a>
+            
+            <a href="commission.html" class="menu-card">
+                <i class="fas fa-tags"></i>
+                <h3>Commission Price</h3>
+                <p>เรทราคางานวาดประเภทต่างๆ</p>
+            </a>
+            
+            <a href="example.html" class="menu-card">
+                <i class="fas fa-palette"></i>
+                <h3>Example Work</h3>
+                <p>ตัวอย่างผลงานที่ผ่านมา</p>
+            </a>
+        </div>
     </div>
+    <div class="content-spacer"></div>
 
+    <div class="content-spacer"></div>
+
+    <div class="content-spacer"></div>
+
+    <div class="content-spacer"></div>
+
+    <nav class="bottom-nav">
+        <a href="shop.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        </a>
+
+        <a href="index.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+        </a>
+
+        <a href="contact.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
+    </nav>
+    <script src="script.js"></script>
 </body>
+<style>
+  /* 1. Snowflake Appearance (ลักษณะของเกล็ดหิมะ) */
+  .snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    user-select: none;
+    cursor: default;
+    pointer-events: none;
+    animation-name: snowflakes-shake;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+  }
+
+  .snowflake .inner {
+    animation-duration: 10s;
+    animation-name: snowflakes-fall;
+    animation-timing-function: linear;
+  }
+
+  /* 2. Keyframes (แอนิเมชันการเคลื่อนที่) */
+  @keyframes snowflakes-fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(110vh); }
+  }
+
+  @keyframes snowflakes-shake {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(80px); }
+  }
+
+  /* 3. Global Animation Settings */
+  .snowflake, 
+  .snowflake .inner {
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+
+  /* 4. Individual Snowflake Positions & Delays (ตำแหน่งและการหน่วงเวลา) */
+  .snowflake:nth-of-type(0)  { left: 1%;  animation-delay: 0s;   }
+  .snowflake:nth-of-type(0) .inner { animation-delay: 0s; }
+
+  .snowflake:first-of-type   { left: 10%; animation-delay: 1s;   }
+  .snowflake:first-of-type .inner, 
+  .snowflake:nth-of-type(8) .inner { animation-delay: 1s; }
+
+  .snowflake:nth-of-type(2)  { left: 20%; animation-delay: .5s;  }
+  .snowflake:nth-of-type(2) .inner, 
+  .snowflake:nth-of-type(6) .inner { animation-delay: 6s; }
+
+  .snowflake:nth-of-type(3)  { left: 30%; animation-delay: 2s;   }
+  .snowflake:nth-of-type(3) .inner, 
+  .snowflake:nth-of-type(11) .inner { animation-delay: 4s; }
+
+  .snowflake:nth-of-type(4)  { left: 40%; animation-delay: 2s;   }
+  .snowflake:nth-of-type(4) .inner, 
+  .snowflake:nth-of-type(10) .inner { animation-delay: 2s; }
+
+  .snowflake:nth-of-type(5)  { left: 50%; animation-delay: 3s;   }
+  .snowflake:nth-of-type(5) .inner { animation-delay: 8s; }
+
+  .snowflake:nth-of-type(6)  { left: 60%; animation-delay: 2s;   }
+  .snowflake:nth-of-type(7)  { left: 70%; animation-delay: 1s;   }
+  .snowflake:nth-of-type(7) .inner { animation-delay: 2.5s; }
+
+  .snowflake:nth-of-type(8)  { left: 80%; animation-delay: 0s;   }
+  .snowflake:nth-of-type(9)  { left: 90%; animation-delay: 1.5s; }
+  .snowflake:nth-of-type(9) .inner { animation-delay: 3s; }
+
+  .snowflake:nth-of-type(10) { left: 25%; animation-delay: 0s;   }
+  .snowflake:nth-of-type(11) { left: 65%; animation-delay: 2.5s; }
+</style>
+
+<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+</div>
+
 
 </html>
