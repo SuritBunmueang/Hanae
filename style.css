@@ -698,7 +698,7 @@ body.dark-mode .nav-menu a:hover {
 
 #ghost {
   position: relative;
-  scale: 0.6; /* ปรับขนาดผีน้อยตรงนี้ได้ (0.6 คือกำลังพอดี) */
+  scale: 0.5; /* ปรับขนาดผีน้อยตรงนี้ได้ (0.6 คือกำลังพอดี) */
 }
 
 #red {
