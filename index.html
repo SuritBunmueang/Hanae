@@ -2,124 +2,91 @@
 <html lang="th">
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanae</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Welcome to Hanae Land</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe0f0 100%);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .intro-container {
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .intro-logo {
+            font-size: 70px;
+            font-weight: bold;
+            color: #ff6fa9;
+            margin: 0;
+            text-shadow: 2px 5px 15px rgba(255, 111, 169, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #f176c0;
+            letter-spacing: 4px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .enter-btn {
+            display: inline-block;
+            padding: 16px 45px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #ff6fa9;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(255, 111, 169, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            background: #ff5c9f;
+            box-shadow: 0 12px 25px rgba(255, 111, 169, 0.5);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .intro-logo { font-size: 50px; }
+            .subtitle { font-size: 14px; }
+            .enter-btn { padding: 14px 35px; font-size: 16px; }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-
-    <nav>
-        <div class="nav-left">
-            <h1>hnaa.e</h1>
-        </div>
-
-        <div class="nav-right">
-            <a href="#gallery">Art Work</a>
-            <a href="index.html#contact">Contact</a>
-        </div>
-    </nav>
-
-    <!-- GALLERY -->
-
-    <section id="gallery">
-        <div class="slider-container">
-
-            <button class="prev">&#10094;</button>
-
-            <div class="slider">
-
-                <a href="art1.html" class="art-card">
-                    <img src="Deco/2.jpg">
-                    <p>Deco</p>
-                </a>
-
-                <a href="art2.html" class="art-card">
-                    <img src="Exprofile01/1 (23).jpg">
-                    <p>Ex. Profile 01</p>
-                </a>
-
-                <a href="art3.html" class="art-card">
-                    <img src="ExProfile 02/1 (2).jpg">
-                    <p>Ex. Profile 02</p>
-                </a>
-
-                <a href="art4.html" class="art-card">
-                    <img src="images/S__51650580.jpg">
-                    <p>Custom Artwork</p>
-                </a>
-
-                <a href="art5.html" class="art-card">
-                    <img src="images/1.jpg">
-                    <p>Ing Artwork</p>
-                </a>
-
-            </div>
-
-            <button class="next">&#10095;</button>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact">
-
-        <h2>ติดต่อสั่งงาน</h2>
-
-        <p>
-            กดปุ่มด้านล่างเพื่อสั่งงานหรือดูผลงานเพิ่มเติม
-        </p>
-
-        <div class="contact-buttons">
-
-            <div class="contact-buttons">
-
-                <a href="https://lin.ee/50TADIj" class="line-btn">
-                    <i class="fa-brands fa-line"></i> สั่งงานผ่าน LINE
-                </a>
-
-                <a href="https://www.instagram.com/hnaa.e_?igsh=MWN2c3JiZThodDdzbQ%3D%3D&utm_source=qr" class="ig-btn">
-                    <i class="fa-brands fa-instagram"></i> ดูผลงานใน Instagram
-                </a>
-
-                <a href="https://www.facebook.com/hanae.192619" class="fb-btn">
-                    <i class="fa-brands fa-facebook"></i> ติดต่อผ่าน Facebook
-                </a>
-
-            </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-        <p>© 2026 hnaa.e</p>
-    </footer>
-
-
-    <script>
-
-        const slider = document.querySelector(".slider");
-        const nextBtn = document.querySelector(".next");
-        const prevBtn = document.querySelector(".prev");
-
-        nextBtn.onclick = () => {
-            slider.scrollLeft += 300;
-        };
-
-        prevBtn.onclick = () => {
-            slider.scrollLeft -= 300;
-        };
-
-    </script>
+    <div class="intro-container">
+        <h1 class="intro-logo">Hanae Land</h1>
+        <div class="subtitle">Art & Design Portfolio</div>
+        
+        <a href="home.html" class="enter-btn">เข้าสู่เว็บไซต์</a>
+    </div>
 
 </body>
 
